@@ -1,65 +1,60 @@
-import Image from "next/image";
+"use client"
+
+import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    return(
+        <div>
+            <header>
+                <div id="navbar-top">
+                    <a>Bingus' emporium</a>
+                    <SearchBar></SearchBar>
+                    <a>Login / Profile</a>
+                    <a>Cart</a>
+                </div>
+                <div id="navbar-bottom">
+                    <a>Computing</a>
+                    <a>Phone</a>
+                    <a>Tv & Sound</a>
+                    <a>Gaming</a>
+                    <a>Home & Leisure</a>
+                    <a>Toys & Hobby</a>
+                    <a>Clothing</a>
+                </div>
+            </header>
+            <div id="noteworthy-sales">
+                <a>Chosen ad below but big</a>
+                <div id="noteworthy-sales-list">
+                    <a>Left facing arrow</a>
+                    <a>First ad small</a>
+                    <a>Second ad small</a>
+                    <a>Third ad small</a>
+                    <a>Fourth ad small</a>
+                    <a>Fifth ad small</a>
+                    <a>Right facing arrow</a>
+                </div>
+            </div>
+            <footer>
+                <div id="footer-shortcuts">
+                    <a>My Profile</a>
+                    <a>My Orders</a>
+                </div>
+                <div id="footer-customer-support">
+                    <a>Usually asked questions</a>
+                    <a>Customer support</a>
+                    <a>Contact us</a>
+                    <a>Returns</a>
+                </div>
+                <div id="footer-about">
+                    <a>About us</a>
+                    <a>Open Positions</a>
+                </div>
+                <div id="footer-socials">
+                    <a>Facebook</a>
+                    <a>Twitter</a>
+                    <a>Instagram</a>
+                </div>
+            </footer>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    );
 }
