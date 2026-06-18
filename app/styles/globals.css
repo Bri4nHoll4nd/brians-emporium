@@ -9,47 +9,100 @@
 #navbar-top {
     display: flex;
     flex-direction: row;
+    gap: 0.6rem;
+}
+
+#navbar-top-logo {
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#navbar-top-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+#navbar-top-login img {
+    width: 2rem;
+}
+
+#navbar-top-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+#navbar-top-profile img {
+    width: 2rem;
+}
+
+#navbar-top-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 2.5rem;
+}
+
+#navbar-top-cart img {
+    width: 2rem;
 }
 
 #navbar-top-searchbar {
-    display: flex;
+    display: grid;
     align-items: center;
-    background-color: var(--whitishGray);
-    border-radius: 1.8rem;
-    padding: 0.33rem;
+    background-color: var(--darkBlue);
+    border-radius: 0.8rem;
+    padding: 0.2rem;
     width: 29rem;
-    margin: 1.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+}
+
+#navbar-top-searchbar-input,
+.navbar-top-searchbar-clear,
+.navbar-top-searchbar-clear.hidden {
+    grid-area: 1 / 1;
 }
 
 #navbar-top-searchbar-input {
-    flex: 1;
-    padding: 0.7rem;
+    padding: 1rem;
     border: none;
-    border-radius: 1.8rem;
+    border-radius: 0.6rem;
     outline: none;
 }
 
-#navbar-top-searchbar-clear {
+.navbar-top-searchbar-clear {
+    justify-self: end;
+    align-self: center;
+    margin-right: 0.6rem;
+    z-index: 1;
     cursor: pointer;
     background: none;
     border: none;
     font-size: 1.2rem;
     color: var(--black);
-    margin-left: -1.5rem;
-    margin-right: 1.5rem;
-    margin-top: -0.15rem;
 }
 
-#navbar-top-searchbar-submit {
-    background-color: var(--blue);
-    color: var(--white);
-    border: none;
-    border-radius: 1.8rem;
-    padding: 0.5rem 0.7rem;
-    cursor: pointer;
-    margin-left: 0.33rem;
+.navbar-top-searchbar-clear.hidden {
+    display: none;
 }
 
-#navbar-top-searchbar-submit:hover {
-    background-color: var(--darkBlue);
+#noteworthy-sales {
+    border-top: 0.1rem solid var(--black);
+    border-bottom: 0.1rem solid var(--black);
 }

@@ -1,14 +1,16 @@
 "use client"
 
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const router = useRouter();
 
     return(
         <div id="main-page-body">
-            <Navbar></Navbar>
+            <Navbar isLoggedIn={isLoggedIn}></Navbar>
             <main>
                 <div id="noteworthy-sales">
                     <a>Chosen ad below but big</a>

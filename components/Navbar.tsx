@@ -1,13 +1,35 @@
 import SearchBar from "@/components/SearchBar";
 
-export default function Navbar() {
+//className={`navbar-top-searchbar-clear ${searchTerm == "" ? 'hidden' : ''}`} onClick={clearSearch}
+
+type NavbarProps = {
+    isLoggedIn: boolean
+}
+
+export default function Navbar({ isLoggedIn }: NavbarProps) {
     return (
         <header id="navbar">
             <div id="navbar-top">
-                <a>Brian's Emporium</a>
+                <button id="navbar-top-logo">Emporium</button>
                 <SearchBar></SearchBar>
-                <a>Login / Profile</a>
-                <a>Cart</a>
+                {isLoggedIn ? (
+                    <button id="navbar-top-profile">
+                        <img src="/images/Profile.svg"
+                        alt="Profile Logo"/>
+                        <span>Profile</span>
+                    </button>
+                ) : (
+                    <button id="navbar-top-login">
+                        <img src="/images/Login.svg"
+                        alt="Profile logo"/>
+                        <span>Login</span>
+                    </button>
+                )}
+                <button id="navbar-top-cart">
+                    <img src="/images/Cart.svg"
+                    alt="Cart logo"/>
+                    <span>Cart</span>
+                </button>
             </div>
             <div id="navbar-bottom">
                 <button>Computing</button>

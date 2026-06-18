@@ -43,9 +43,7 @@ export default function SearchBar() {
             placeholder="Search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}/>
-            <button id="navbar-top-searchbar-clear" onClick={clearSearch}>x</button>
-            <button id="navbar-top-searchbar-submit">Search</button>
+            <button className={`navbar-top-searchbar-clear ${searchTerm == "" ? 'hidden' : ''}`} onClick={clearSearch}>x</button>
         </form>
     );
-    //<button id="navbar-top-searchbar-submit" onClick={(e) => handleSearch(e, false)}>Search</button>
 }
