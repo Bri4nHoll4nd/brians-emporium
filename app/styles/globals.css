@@ -4,12 +4,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: min(calc(100% - 2rem), 90rem);
+    margin-inline: auto;
+}
+
+#main-page-body > * {
+    width: 100%;
 }
 
 #navbar-top {
     display: flex;
     flex-direction: row;
     gap: 0.6rem;
+    width: 100%;
+    justify-content: center;
 }
 
 #navbar-top-logo {
@@ -17,6 +25,7 @@
     background: transparent;
     font-size: 1.5rem;
     cursor: pointer;
+    align-self: center;
 }
 
 #navbar-top-login {
@@ -70,7 +79,8 @@
     width: 29rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-
+    flex: 1;
+    max-width: 50rem;
 }
 
 #navbar-top-searchbar-input,
@@ -98,6 +108,22 @@
     color: var(--black);
 }
 
+#navbar-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#navbar-bottom button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 800;
+}
+
 .navbar-top-searchbar-clear.hidden {
     display: none;
 }
@@ -105,4 +131,27 @@
 #noteworthy-sales {
     border-top: 0.1rem solid var(--black);
     border-bottom: 0.1rem solid var(--black);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-column-content a {
+    cursor: pointer;
+    text-decoration: underline;
+    margin-bottom: 0.2rem;
 }

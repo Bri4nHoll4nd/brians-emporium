@@ -10,26 +10,26 @@ export default function Navbar({ isLoggedIn }: NavbarProps) {
     return (
         <header id="navbar">
             <div id="navbar-top">
-                <button id="navbar-top-logo">Emporium</button>
+                <a id="navbar-top-logo">Emporium</a>
                 <SearchBar></SearchBar>
                 {isLoggedIn ? (
-                    <button id="navbar-top-profile">
+                    <a id="navbar-top-profile">
                         <img src="/images/Profile.svg"
                         alt="Profile Logo"/>
                         <span>Profile</span>
-                    </button>
+                    </a>
                 ) : (
-                    <button id="navbar-top-login">
+                    <a id="navbar-top-login">
                         <img src="/images/Login.svg"
                         alt="Profile logo"/>
                         <span>Login</span>
-                    </button>
+                    </a>
                 )}
-                <button id="navbar-top-cart">
+                <a id="navbar-top-cart">
                     <img src="/images/Cart.svg"
                     alt="Cart logo"/>
                     <span>Cart</span>
-                </button>
+                </a>
             </div>
             <div id="navbar-bottom">
                 <button>Computing</button>

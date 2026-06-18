@@ -15,34 +15,46 @@ export default function Home() {
                 <div id="noteworthy-sales">
                     <a>Chosen ad below but big</a>
                     <div id="noteworthy-sales-list">
-                        <a>Left facing arrow</a>
-                        <a>First ad small</a>
-                        <a>Second ad small</a>
-                        <a>Third ad small</a>
-                        <a>Fourth ad small</a>
-                        <a>Fifth ad small</a>
-                        <a>Right facing arrow</a>
+                        <button>&larr;</button>
+                        <button>First ad small</button>
+                        <button>Second ad small</button>
+                        <button>Third ad small</button>
+                        <button>Fourth ad small</button>
+                        <button>Fifth ad small</button>
+                        <button>&rarr;</button>
                     </div>
                 </div>
                 <footer>
-                    <div id="footer-shortcuts">
-                        <a>My Profile</a>
-                        <a>My Orders</a>
+                    <div className="footer-column">
+                        <div className="footer-column-content">
+                            <h3>Shortcuts</h3>
+                            <a>My Profile</a>
+                            <a>My Orders</a>
+                        </div>
                     </div>
-                    <div id="footer-customer-support">
-                        <a>Usually asked questions</a>
-                        <a>Customer support</a>
-                        <a>Contact us</a>
-                        <a>Returns</a>
+                    <div className="footer-column">
+                        <div className="footer-column-content">
+                            <h3>Help and Support</h3>
+                            <a>Usually asked questions</a>
+                            <a>Customer support</a>
+                            <a>Contact us</a>
+                            <a>Returns</a>
+                        </div>
                     </div>
-                    <div id="footer-about">
-                        <a>About us</a>
-                        <a>Open Positions</a>
+                    <div className="footer-column">
+                        <div className="footer-column-content">
+                            <h3>Information</h3>
+                            <a>About us</a>
+                            <a>Open Positions</a>
+                        </div>
                     </div>
-                    <div id="footer-socials">
-                        <a>Facebook</a>
-                        <a>Twitter</a>
-                        <a>Instagram</a>
+                    <div className="footer-column">
+                        <div className="footer-column-content">
+                            <h3>Socials</h3>
+                            <a>Facebook</a>
+                            <a>Twitter</a>
+                            <a>Instagram</a>
+                        </div>
                     </div>
                 </footer>
             </main>
